@@ -1,0 +1,39 @@
+.tabs {
+    overflow: hidden;
+    background-color: rgba(125, 125, 125 , 0.4);
+    padding: 0;
+}
+
+.tabs button {
+    background-color: #a29fa3;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.5s;
+}
+
+.tabs button:hover {
+    background-color: #a29fa3;
+}
+
+.tabs button.active {
+    background-color: #1e1f25;
+    color: #f4f1f5;
+}
+
+.tablinks{
+    font-family: "Gilroy", Gilroy-Regular;
+    font-size: 17px;
+}
+
+.tabcontents {
+    padding: 0 20px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}

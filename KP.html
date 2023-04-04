@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<link rel="stylesheet" href="css/kpCss.css" type="text/css">
+<link rel="stylesheet" href="css/tabs.css" type="text/css">
+<link rel="stylesheet" href="css/slider.css" type="text/css">
+<link rel="stylesheet" href="css/input.css" type="text/css">
+<link rel="stylesheet" href="css/gilroy.css" type="text/css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коррекция дисторсии</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <p>Коррекция дисторсии изображения</p>
+    </header>
+    <main>
+        <div class="content">
+            <div class="tabs">
+                <button class="tablinks" onclick="openTab(event, 'correction')">Коррекция</button>
+                <button class="tablinks" onclick="openTab(event, 'gallery')">Галерея</button>
+            </div>
+            <div class="tabcontents">
+                <div id="correction" class="tabcontent">
+                    <div class="photo-buttons-filters">
+                        <div class="photo-buttons">
+                            <canvas id="canvas"></canvas>
+                            <div class="buttons">
+                                <input type="file" id="file-uploader" class="img-input" accept=".jpg, .png" onchange="handleImage(event)"/>
+                                <label for="file-uploader">Открыть изображение</label>
+                            </div>
+                        </div>
+                        <div class="filters" id="filters" onchange="onSliderChange()">
+                            <p>Фокусное расстояние Fx</p>
+                            <div class="filter">
+                                <input class="slider" id="fxSlider" type="range" min="0.0" max="2.0" value="0.0"
+                                       step="0.01">
+                                <label class="slider-label" for="fxSlider" id="fxSliderLabel">1.0</label>
+                            </div>
+                            <p>Фокусное расстояние Fy</p>
+                            <div class="filter">
+                                <input class="slider" id="fySlider" type="range" min="0.0" max="2.0" value="0.0"
+                                       step="0.01">
+                                <label class="slider-label" for="fySlider" id="fySliderLabel">1.0</label>
+                            </div>
+                            <p>Ширина</p>
+                            <div class="filter">
+                                <input class="slider" id="aSlider" type="range" min="0.0" max="4.0" value="2.0"
+                                       step="0.001">
+                                <label class="slider-label" for="aSlider" id="aSliderLabel">1.0</label>
+                            </div>
+                            <p>Высота</p>
+                            <div class="filter">
+                                <input class="slider" id="bSlider" type="range" min="0.0" max="4.0" value="2.0"
+                                       step="0.001">
+                                <label class="slider-label" for="bSlider" id="bSliderLabel">1.0</label>
+                            </div>
+                            <p>Масштаб</p>
+                            <div class="filter">
+                                <input class="slider" id="scaleSlider" type="range" min="0.0" max="10.0" value="1.0"
+                                       step="0.001">
+                                <label class="slider-label" for="scaleSlider" id="scaleSliderLabel">1.0</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gallery" class="tabcontent gallery">
+                    <img src="https://picsum.photos/190/190?1"/>
+                    <img src="https://picsum.photos/190/190?2"/>
+                    <img src="https://picsum.photos/190/190?3"/>
+                    <img src="https://picsum.photos/190/190?4"/>
+                    <img src="https://picsum.photos/190/190?5"/>
+                    <img src="https://picsum.photos/190/190?6"/>
+                    <img src="https://picsum.photos/190/190?7"/>
+                    <img src="https://picsum.photos/190/190?8"/>
+                    <img src="https://picsum.photos/190/190?9"/>
+                    <img src="https://picsum.photos/190/190?10"/>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="font-size: 16px; padding: 0 90px;">Проект выполнил студент 494 группы Ермаков Даниил</p>
+    </footer>
+</div>
+</body>
+<script src="scripts/slider.js"></script>
+<script src="scripts/tabs.js"></script>
+<script src="scripts/fisheyegl.js"></script>
+<script src="scripts/main.js"></script>
+</html>

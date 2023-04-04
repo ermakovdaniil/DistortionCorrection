@@ -1,0 +1,26 @@
+.img-input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.img-input + label {
+    cursor: pointer;
+    font-family: "Gilroy", Gilroy-Regular;
+    font-size: 18px;
+    background-color: rgba(125, 125, 125 , 0.4);
+    box-shadow: 0 0 12px rgba(0, 0, 0 , 0.2);
+    text-align: center;
+    display: inline-block;
+    border-radius: 3px;
+    margin: 20px 20px 0;
+    padding: 10px 10px;
+}
+
+.img-input:focus + label,
+.img-input + label:hover {
+    background-color: #a29fa3;
+}
